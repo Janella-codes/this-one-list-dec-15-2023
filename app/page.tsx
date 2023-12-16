@@ -1,4 +1,5 @@
 
+import { UserButton } from "@clerk/nextjs";
 import { TodoItem } from "./components/TodoItems";
 import { prisma } from "./db";
 import Link from "next/link";
@@ -27,11 +28,18 @@ export default async function Home() {
           New
         </Link>
     </header>
+    <UserButton />
     <ul className="p1-4">
       {todos.map(todo => (
         <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
       ))}
     </ul>
+
+
   </>
   )
 }
+
+
+
+ 

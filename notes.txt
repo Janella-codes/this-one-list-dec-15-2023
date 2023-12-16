@@ -1,0 +1,46 @@
+Github - name - list_this_one3
+
+
+
+git init
+
+
+git add -A
+
+git commit -m "Add auth"
+
+git push
+
+npx create-next-app@latest .
+
+npm i prisma --save-dev
+
+npx prisma init --datasource-provider mysql 
+
+
+
+new_to_do_12_15_2023
+
+
+planet scale 
+
+dev branch PW: 
+
+DATABASE_URL='mysql://yvn714vhdsah3xqto7pg:pscale_pw_UKn4x1836LYhPYm5HKJ5iAp8pP5pYIL6EnpkWOcbft3@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
+
+DATABASE_URL='mysql://yvn714vhdsah3xqto7pg:pscale_pw_UKn4x1836LYhPYm5HKJ5iAp8pP5pYIL6EnpkWOcbft3@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
+
+
+prod branch PW: 
+
+DATABASE_URL='mysql://mtlx5fnx6fva108yebxc:pscale_pw_EqguEq8tyHXXqKfdzCEBkgHGUmx5gWBIkJKqKbG1Ulh@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
+
+
+Clerks: 
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_YW11c2luZy1zd2lmdC04Ny5jbGVyay5hY2NvdW50cy5kZXYk
+CLERK_SECRET_KEY=sk_test_MPVTmMYHcDFTnxu7vogsNQw5hJM2dF2nCkIOzbrEjx
+
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_YW11c2luZy1zd2lmdC04Ny5jbGVyay5hY2NvdW50cy5kZXYk
+CLERK_SECRET_KEY=sk_test_MPVTmMYHcDFTnxu7vogsNQw5hJM2dF2nCkIOzbrEjx
