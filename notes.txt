@@ -1,3 +1,29 @@
+
+
+
+janellavos5@gmail.com
+
+trans-twit-exp4
+DATABASE_URL='mysql://qrgtrrd3q5mtpyyyxs4a:************@aws.connect.psdb.cloud/trans-twit-exp4?sslaccept=strict'
+
+
+
+janelle1@mycci
+
+trans-twit-exp5
+
+DATABASE_URL='mysql://p80og9iucpwf2bwwmjp2:************@aws.connect.psdb.cloud/tran-twit-exp5?sslaccept=strict'
+
+
+
+
+
+
+//************** 
+
+
+
+
 Github - name - list_this_one3
 
 
@@ -24,17 +50,25 @@ new_to_do_12_15_2023
 
 planet scale 
 
+
+janellevos371@gmail.com
+
+
+DB name: forum-test1
+
+
+
 dev branch PW: 
 
-DATABASE_URL='mysql://yvn714vhdsah3xqto7pg:pscale_pw_UKn4x1836LYhPYm5HKJ5iAp8pP5pYIL6EnpkWOcbft3@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
+DATABASE_URL='mysql://12p8rdkng97eov9janba:pscale_pw_Xu2oyQXMEk1hA60bpJM0G0fclxQyuIi1rPTNDytUQ8Y@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
 
-DATABASE_URL='mysql://yvn714vhdsah3xqto7pg:pscale_pw_UKn4x1836LYhPYm5HKJ5iAp8pP5pYIL6EnpkWOcbft3@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
-
+DATABASE_URL='mysql://12p8rdkng97eov9janba:pscale_pw_Xu2oyQXMEk1hA60bpJM0G0fclxQyuIi1rPTNDytUQ8Y@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
 
 prod branch PW: 
 
-DATABASE_URL='mysql://mtlx5fnx6fva108yebxc:pscale_pw_EqguEq8tyHXXqKfdzCEBkgHGUmx5gWBIkJKqKbG1Ulh@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
+DATABASE_URL='mysql://81bog7cwra82vqi3dcxm:pscale_pw_Rth3VyuAHNK6yOVPZ9fWBQkxKmdvv6PqNYZHd06ayoZ@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
 
+DATABASE_URL='mysql://81bog7cwra82vqi3dcxm:pscale_pw_Rth3VyuAHNK6yOVPZ9fWBQkxKmdvv6PqNYZHd06ayoZ@aws.connect.psdb.cloud/forum-test1?sslaccept=strict'
 
 Clerks: 
 

@@ -3,6 +3,8 @@ import { UserButton } from "@clerk/nextjs";
 import { TodoItem } from "./components/TodoItems";
 import { prisma } from "./db";
 import Link from "next/link";
+import Image from "next/image";
+import Pic from "./Postpic";
 
 function getTodos() {
   return prisma.todo.findMany()
@@ -13,6 +15,8 @@ async function toggleTodo(id: string, complete: boolean) {
 
   await prisma.todo.update( {where: { id }, data: { complete } })
 }
+
+
 
 export default async function Home() {
   const todos = await prisma.todo.findMany()
@@ -34,6 +38,10 @@ export default async function Home() {
         <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
       ))}
     </ul>
+
+        <Pic></Pic>
+
+
 
 
   </>
