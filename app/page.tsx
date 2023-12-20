@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Pic from "./Postpic";
 import { Button } from "./components/Button";
+import PostComment from "./components/PostComment";
 
 function getTodos() {
   return prisma.todo.findMany()
@@ -22,6 +23,8 @@ async function toggleTodo(id: string, complete: boolean) {
 export default async function Home() {
   const todos = await prisma.todo.findMany()
 
+  const postContent = await prisma.post.findMany()
+
   return ( <>
     <header className="flex justify-between items-center mb-4">
       <h1 className="text-2xl">To dos</h1>
@@ -34,23 +37,18 @@ export default async function Home() {
         </Link>
     </header>
     <UserButton />
-    <ul className="p1-4 p-52">
+    <ul className="p1-4 p-32">
       {todos.map(todo => (
         <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
       ))}
     </ul>
 
-    <h1 className="text-2xl p-4">Post</h1>
-        <textarea 
-                 className="flex-grow resize-none overflow-hidden p-5 text-lg outline-none rounded-xl bg-gray-100"
-                  name="name"
-                 
-                  placeholder="what's going on?"
-                  required 
-                />
+    <PostComment postContent={postContent}/>
                <Button className="p-4"/>
 
                <Pic />
+
+               
   </>
   )
 }

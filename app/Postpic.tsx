@@ -7,49 +7,54 @@ import v4 from './sweeter_dress_12_28_2021.png';
 
 export default function Pic() {
     return (
-        <div>
-            <div style={{ display: 'flex' }}>
-                <h1>My Homepage</h1>
-                <p>My name is Donald Duck.</p>
-            </div>
-            <div style={{ display: 'flex' }}>
-                <Image
-                    src={hedgehog}
-                    width={300}
-                    height={300}
-                    object-fit='cover'
-                    alt="Picture of the author"
-                />  
+        <div className='flex flex-col'>
+            <h1 className='flex z-0'>My Homepage</h1>
 
-                <Image
-                    src={v1}
-                    width={100}
-                    height={100}
-                    object-fit='cover'
-                    alt="Picture of the author"
-                />  
-                <Image
-                    src={v2}
-                    width={100}
-                    height={100}
-                    object-fit='cover'
-                    alt="Picture of the author"
-                />  
-                <Image
-                    src={v3}
-                    width={100}
-                    height={100}
-                    object-fit='cover'
-                    alt="Picture of the author"
-                />
-                <Image
-                    src={v4}
-                    width={100}
-                    height={100}
-                    object-fit='cover'
-                    alt="Picture of the author"
-                />
-            </div>
+
+            
+                <h3 className='mt-4'>my name is dingdong</h3>
+       
+         
+        <div className='p-4 space-y-4'>
+
+            <Image
+                src={hedgehog}
+                width={300}
+                height={300}
+                object-fit='cover'
+                alt="Picture of the author"
+            />  
+
+            <Image
+                src={v1}
+                width={100}
+                height={100}
+                object-fit='cover'
+                alt="Picture of the author"
+            />  
+            <Image
+                src={v2}
+                width={100}
+                height={100}
+                object-fit='cover'
+                alt="Picture of the author"
+            />  
+            <Image
+                src={v3}
+                width={100}
+                height={100}
+                object-fit='cover'
+                alt="Picture of the author"
+            />
+            <Image
+                src={v4}
+                width={100}
+                height={100}
+                object-fit='cover'
+                alt="Picture of the author"
+            />
+        </div>
+
         </div>
     )
 }
