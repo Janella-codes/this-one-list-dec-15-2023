@@ -10,10 +10,10 @@ export default function PostButton() {
 
     return (
         <button disabled={pending}
-        className='px-4 py-2 bg-green-400 text-white rounded-md'>
+        className='self-end px-2 py-2 w-20 bg-cyan-200 text-black rounded-md'>
             { pending ? 'Creating...' : 
-            'Add' }
-            Add
+            'smash it' }
+        
         </button>
     )
 }   
