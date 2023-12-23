@@ -5,6 +5,9 @@ import { useCallback, useLayoutEffect, useOptimistic, useRef, useState } from "r
 import { GetPosts, addPost } from "@/actions/action";
 import PostButton from "./PostButton";
 
+
+
+
 function updateTextAreaSize(textArea?: HTMLTextAreaElement) {
     if (textArea == null) return
     textArea.style.height = "0"
@@ -56,7 +59,7 @@ export default function PostedContent({
                     } 
                 >
                 <textarea 
-                    className="flex-grow resize-none overflow-hidden p-4 text-lg outline-none"
+                    className=" bg-slate-200 flex-grow rounded-full resize-none overflow-hidden p-4 text-lg outline-none"
                     ref={inputRef}
                     name="content"
                     placeholder='Todo name'
@@ -70,7 +73,7 @@ export default function PostedContent({
             <div className="flex flex-col gap-4 w-[600px] m-16 border-b px-4 py-2">
                 {optimisticContent.map((post) => (
                     <span key={post.id}>
-                        <p className="bg-slate-300 h-14 border-b text-center px-2 py-6">{post.content}</p>
+                        <p className="bg-pink-200 h-14 border-b rounded-full text-center px-2 py-6">{post.content}</p>
                     </span>
                     ))
                 }

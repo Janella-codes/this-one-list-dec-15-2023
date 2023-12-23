@@ -10,7 +10,7 @@ export default function PostButton() {
 
     return (
         <button disabled={pending}
-        className='self-end px-2 py-2 w-20 bg-cyan-200 text-black rounded-md'>
+        className=' hover:bg-pink-200 self-end px-2 py-2 w-20 bg-cyan-200 text-black rounded-full'>
             { pending ? 'Creating...' : 
             'smash it' }
         

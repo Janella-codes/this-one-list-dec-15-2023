@@ -22,20 +22,29 @@ async function toggleTodo(id: string, complete: boolean) {
 export default async function Home() {
   const todos = await prisma.todo.findMany()
 
-  const postContent = await prisma.post.findMany()
+  const postContent = await prisma.post.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
 
  
 
   return ( <>
+  <UserButton />
     <header className="flex justify-between items-center mb-4">
-    <UserButton />
+    
    
-  
+    <ul className="flex-1 p1-4 p-2 sticky top-0 px-2 py-4">
+      {todos.map(todo => (
+        <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
+      ))}
+    </ul>
 
       
       <Link 
-        className="border border-slate-300 text-slate-800 px-2 py-1 rounded
-        hover:bg-slate-700 focus-within:bg-slate-700 outline-none"
+        className="border bg-pink-100 border-slate-300 text-slate-800 px-2 py-1 rounded-full
+        hover:bg-pink-200 focus-within:bg-slate-200 outline-none"
         href="/new"
         >
           New
@@ -43,12 +52,7 @@ export default async function Home() {
     </header>
     <PostComment postContent={postContent}/>
     
-    <ul className="p1-4 p-32">
-      {todos.map(todo => (
-        <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
-      ))}
-    </ul>
-   
+
    
 
                <Pic />
@@ -58,6 +62,15 @@ export default async function Home() {
   )
 }
 
+/*
+
+function RecentPosts() {
 
 
+  const  postContent = [] 
+
+  return <InfinitePostList postContent={postContent}/>
+
+}
  
+*/

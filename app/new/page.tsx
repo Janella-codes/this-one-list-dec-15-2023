@@ -32,7 +32,7 @@ export default function Home() {
         name="title" 
         className= "border border-slate-300 bg-transparent rounded px-2 py-1 outline-none focus-within:border-slate-100"
         />
-        <div className="flex gap-1 justify-end">
+        <div className="flex gap-1 justify-end sticky top-0 px-2 py-4">
             <Link 
             href=".."
             className="border border-slate-300 text-slate-600 px-2 py-1 rounded
