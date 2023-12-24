@@ -16,7 +16,7 @@ export default function Pic() {
 
     <div>
         
-        <div className='h-4'>
+        <div className='mb-4'>
 
                 <Image
                     src={hedgehog}

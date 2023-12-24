@@ -32,11 +32,11 @@ export default async function Home() {
   return ( <>
   <UserButton />
 
-  <div className="flex flex-col items-start gap-2 mt-6 mb-1 ml-60">
-    <Pic />
-    </div>
 
- 
+
+
+
+  <div className="container mx-auto flex items-start">
 
   <div className="flex flex-col items-start gap-2">
   <nav className="sticky top-1">
@@ -63,21 +63,14 @@ export default async function Home() {
   </nav>
   </div>
 
-  <div className="flex flex-col items-center ml-20 z-0 top-0">
-
-<div className="flex w-[800px]">
-  <PostComment postContent={postContent}/>
-  </div>
-</div>
-
- 
-
   <div className="mt-20 min-h-screen flex-grow border-x">
 
   <div className="flex min-h-screen border-x gap-2 border-b py-2">
     <div className="flex flex-col w-full text-center">
       <h1 className="text-2xl">Recent Posts</h1>
       <div className="flex flex-col gap-2 mt-4">
+      <Pic />
+      <PostComment postContent={postContent}/>
         {postContent.map((post) => (
           <span key={post.id}>
             <ul className="flex w-full my-4 text-center text-2x1 border-b">
@@ -98,7 +91,7 @@ export default async function Home() {
                
 </div>
 
-
+</div>
 
 
   </>

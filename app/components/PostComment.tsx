@@ -64,7 +64,7 @@ export default function PostedContent({
                 >
                 <textarea 
                   
-                    className="flex-grow ml-60 w-[350px] resize-none overflow-hidden p-4 text-lg outline-none"
+                    className="flex-grow  resize-none overflow-hidden p-4 text-lg outline-none"
                     ref={inputRef}
                     name="content"
                     placeholder='Todo name'
