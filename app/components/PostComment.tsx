@@ -46,10 +46,10 @@ export default function PostedContent({
         });
     return (
         <>
-            <div className="flex  gap-2 border-b px-4">
-                <div className="flex">
+           
             <form 
-                className="flex flex-col gap-2 px-4"
+                
+                className="flex flex-col gap-2 px-4 py-2"
                 ref={ref} 
                 action= {async formData => {
                         ref.current?.reset();
@@ -63,7 +63,8 @@ export default function PostedContent({
                     } 
                 >
                 <textarea 
-                    className=" resize-none overflow-hidden p-4 text-lg outline-none"
+                  
+                    className="flex-grow ml-60 w-[350px] resize-none overflow-hidden p-4 text-lg outline-none"
                     ref={inputRef}
                     name="content"
                     placeholder='Todo name'
@@ -74,8 +75,7 @@ export default function PostedContent({
                 />
                 <PostButton/>
             </form>
-        </div>
-            </div>
+   
         </>
     )
 }

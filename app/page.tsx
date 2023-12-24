@@ -63,9 +63,9 @@ export default async function Home() {
   </nav>
   </div>
 
-  <div className="flex flex-col items-center ml-60 z-0 top-0">
+  <div className="flex flex-col items-center ml-20 z-0 top-0">
 
-<div className="flex w-full border-x top-3">
+<div className="flex w-[800px]">
   <PostComment postContent={postContent}/>
   </div>
 </div>
@@ -80,7 +80,13 @@ export default async function Home() {
       <div className="flex flex-col gap-2 mt-4">
         {postContent.map((post) => (
           <span key={post.id}>
-            <p className="flex w-full text-center border-b">{post.content}</p>
+            <ul className="flex w-full my-4 text-center text-2x1 border-b">
+              <li>
+                <p className="py-4 px-40">{post.content}</p>
+              </li>
+     
+            </ul>
+          
           </span>
         ))}
       </div>
