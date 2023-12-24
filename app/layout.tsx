@@ -19,7 +19,7 @@ export default function RootLayout({
 
     <ClerkProvider>
     <html lang="en">
-       <body className={`${inter.className}  bg-cyan-400 text-slate-600 container mx-auto p-4`}>{children}</body>
+       <body className={`${inter.className}  bg-cyan-300 text-slate-600 container mx-auto p-4`}>{children}</body>
     </html>
     </ClerkProvider>
   )

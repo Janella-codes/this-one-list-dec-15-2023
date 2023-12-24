@@ -32,24 +32,32 @@ export default async function Home() {
 
   return ( <>
   <UserButton />
-    <header className="flex justify-between items-center mb-4">
-    
-   
-    <ul className="flex-1 p1-4 p-2 sticky top-0 px-2 py-4">
-      {todos.map(todo => (
-        <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
-      ))}
-    </ul>
+  <nav className="mt-5 sticky top-0 px-2 py-4">
+        <ul className="flex flex-col items-start gap-2 whitespace-nowrap">
+          <li>
+              <Link 
+                  className="mt-5 bg-pink-100 border-slate-300 text-slate-800 px-2 py-1 rounded-full
+                  hover:bg-pink-200 focus-within:bg-slate-200 outline-none"
+                  href="/new"
+                  >
+                    New
+                  </Link>
+          </li>
+          <li>
+                <h1 className="mt-6 text-2xl">To do</h1>
+          </li>
+          <li className="mt-6">
+              {todos.map(todo => (
+                <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} />
+              ))}
 
-      
-      <Link 
-        className="border bg-pink-100 border-slate-300 text-slate-800 px-2 py-1 rounded-full
-        hover:bg-pink-200 focus-within:bg-slate-200 outline-none"
-        href="/new"
-        >
-          New
-        </Link>
-    </header>
+          </li>
+      </ul>
+  </nav>
+
+    <Pic />
+
+  
     <PostComment postContent={postContent}/>
     
 

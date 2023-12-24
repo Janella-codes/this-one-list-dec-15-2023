@@ -9,10 +9,10 @@ type ProfileImageProps = {
 
 export function ProfileImage({ src, className = ""}: ProfileImageProps) {
     return (
-    <div className={`relative h-12 w-12 overflow-hidden rounded-full ${className}`} >
+    <div className={`px-4 h-5 w-2 overflow-hidden rounded-full ${className}`} >
     
         (
-            <Image
+            <Image className="rounded-full justify-center"
                     src={hedgehog}
                     width={300}
                     height={300}
