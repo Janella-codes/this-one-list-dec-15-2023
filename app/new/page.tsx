@@ -19,7 +19,7 @@ async function createTodo(data: FormData) {
 export default function Home() {
     return (
     <>
-    <header className="flex justify-between items-center mb-4">
+    <header className="flex  items-center mb-4">
       <h1 className="text-2xl">new</h1>
       <Link 
         className="border border-slate-300 text-slate-800 px-2 py-1 rounded

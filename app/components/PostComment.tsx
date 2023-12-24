@@ -4,6 +4,7 @@
 import { useCallback, useLayoutEffect, useOptimistic, useRef, useState } from "react";
 import { GetPosts, addPost } from "@/actions/action";
 import PostButton from "./PostButton";
+import React from "react";
 
 
 
@@ -31,6 +32,7 @@ export default function PostedContent({
         const textAreaRef = useRef<HTMLTextAreaElement>();
         const inputRef = useCallback((textArea: HTMLTextAreaElement) => {
             updateTextAreaSize(textArea);
+            
             textAreaRef.current = textArea
         }, []);
         useLayoutEffect(() => {
@@ -44,8 +46,10 @@ export default function PostedContent({
         });
     return (
         <>
+            <div className="flex  gap-2 border-b px-4">
+                <div className="flex">
             <form 
-                className='flex flex-col w-[600px] m-16 gap-2  px-2 py-2'
+                className="flex flex-col gap-2 px-4"
                 ref={ref} 
                 action= {async formData => {
                         ref.current?.reset();
@@ -59,7 +63,7 @@ export default function PostedContent({
                     } 
                 >
                 <textarea 
-                    className=" bg-slate-200 flex-grow rounded-full resize-none overflow-hidden p-4 text-lg outline-none"
+                    className=" resize-none overflow-hidden p-4 text-lg outline-none"
                     ref={inputRef}
                     name="content"
                     placeholder='Todo name'
@@ -70,15 +74,10 @@ export default function PostedContent({
                 />
                 <PostButton/>
             </form>
-            <div className="flex flex-col gap-4 w-[600px] m-16 border-b px-4 py-2">
-                {optimisticContent.map((post) => (
-                    <span key={post.id}>
-                        <p className="bg-pink-200 h-14 border-b rounded-full text-center px-2 py-6">{post.content}</p>
-                    </span>
-                    ))
-                }
+        </div>
             </div>
         </>
     )
 }
+
 

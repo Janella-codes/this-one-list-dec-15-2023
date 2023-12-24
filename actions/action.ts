@@ -7,28 +7,18 @@ export const addPost = async (formData: FormData) => {
     
     const prisma = new PrismaClient();
     const content = formData.get('content');
-
-    const posts = await prisma.post.findMany({
-        orderBy: {
-          createdAt: "asc",
-        },
-      });
     
     try { 
-      
       await prisma.post.create({
-    
         data: {
         content: content as string,
       },
-    
-
     });
   } catch (e) {
 
   }
 
-    revalidatePath("/postContent")
+    revalidatePath("/content")
   };
 
     export const GetPosts = async (formData: FormData) => {
@@ -81,3 +71,4 @@ const getUsersWithPosts = async () => {
   };
   
   getUsersWithPosts();
+

@@ -9,14 +9,14 @@ import Link from 'next/link';
 export default function Pic() {
     return (
    
-           <div className='mr-6 mt-4'>
+           <div>
      
-        <h3 className='px-60 p-4 space-x-20'>my profile</h3>
+        <h3>my profile</h3>
         
 
-    <div className='flex'>
+    <div>
         
-        <div className='px-48 p-4 space-x-30'>
+        <div className='h-4'>
 
                 <Image
                     src={hedgehog}

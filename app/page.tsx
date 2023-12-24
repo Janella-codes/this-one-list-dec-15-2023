@@ -24,15 +24,22 @@ export default async function Home() {
 
   const postContent = await prisma.post.findMany({
     orderBy: {
+      
       createdAt: "desc",
     },
   });
 
- 
-
   return ( <>
   <UserButton />
-  <nav className="mt-5 sticky top-0 px-2 py-4">
+
+  <div className="flex flex-col items-start gap-2 mt-6 mb-1 ml-60">
+    <Pic />
+    </div>
+
+ 
+
+  <div className="flex flex-col items-start gap-2">
+  <nav className="sticky top-1">
         <ul className="flex flex-col items-start gap-2 whitespace-nowrap">
           <li>
               <Link 
@@ -44,7 +51,7 @@ export default async function Home() {
                   </Link>
           </li>
           <li>
-                <h1 className="mt-6 text-2xl">To do</h1>
+                <h1 className=" text-2xl">To do</h1>
           </li>
           <li className="mt-6">
               {todos.map(todo => (
@@ -54,23 +61,47 @@ export default async function Home() {
           </li>
       </ul>
   </nav>
+  </div>
 
-    <Pic />
+  <div className="flex flex-col items-center ml-60 z-0 top-0">
 
-  
-    <PostComment postContent={postContent}/>
-    
+<div className="flex w-full border-x top-3">
+  <PostComment postContent={postContent}/>
+  </div>
+</div>
 
-   
+ 
 
-               <Pic />
-        
+  <div className="mt-20 min-h-screen flex-grow border-x">
+
+  <div className="flex min-h-screen border-x gap-2 border-b py-2">
+    <div className="flex flex-col w-full text-center">
+      <h1 className="text-2xl">Recent Posts</h1>
+      <div className="flex flex-col gap-2 mt-4">
+        {postContent.map((post) => (
+          <span key={post.id}>
+            <p className="flex w-full text-center border-b">{post.content}</p>
+          </span>
+        ))}
+      </div>
+
+    </div>
+
+
+</div>
                
+</div>
+
+
+
+
   </>
   )
 }
 
 /*
+
+ <PostComment postContent={postContent}/>
 
 function RecentPosts() {
 

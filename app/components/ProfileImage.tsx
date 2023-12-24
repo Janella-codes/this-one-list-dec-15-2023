@@ -9,7 +9,7 @@ type ProfileImageProps = {
 
 export function ProfileImage({ src, className = ""}: ProfileImageProps) {
     return (
-    <div className={`px-4 h-5 w-2 overflow-hidden rounded-full ${className}`} >
+    <div className={` w-2 overflow-hidden rounded-full ${className}`} >
     
         (
             <Image className="rounded-full justify-center"
